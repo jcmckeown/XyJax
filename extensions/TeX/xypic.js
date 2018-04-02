@@ -3454,6 +3454,7 @@ MathJax.Hub.Register.StartupHook("TeX Xy-pic Require",function () {
         lit('=:').andr(flit('"')).andr(p.id).andl(felem('"')).to(function (id) { return AST.Pos.SaveBase(id); }),
         lit('=@').andr(flit('"')).andr(p.id).andl(felem('"')).to(function (id) { return AST.Pos.SaveStack(id); }),
         lit('=').andr(flit('"')).andr(p.id).andl(felem('"')).to(function (id) { return AST.Pos.SavePos(id); }),
+	lit('=').andr(flit('“')).andr(p.id).andl(felem('”')).to(function (id) { return AST.Pos.SavePos(id); }),
         lit('=').andr(p.nonemptyCoord).andl(flit('"')).and(p.id).andl(felem('"')).to(function (mid) { return AST.Pos.SaveMacro(mid.head, mid.tail); }),
         p.xyimport
       );
